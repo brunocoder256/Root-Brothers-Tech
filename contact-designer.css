@@ -1,0 +1,41 @@
+/* Contact Designer Button Styles */
+.contact-designer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(45deg, #008000, #808080);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    animation: vibrate 0.5s infinite alternate;
+}
+
+.contact-designer-btn:hover {
+    background: linear-gradient(45deg, #808080, #008000);
+    transform: scale(1.05);
+}
+
+.contact-designer-btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-1px);
+    }
+    50% {
+        transform: translateX(1px);
+    }
+    75% {
+        transform: translateX(-1px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
