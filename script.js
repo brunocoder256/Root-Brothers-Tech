@@ -169,6 +169,33 @@ document.addEventListener('DOMContentLoaded', function() {
         contactObserver.observe(contactSection);
     }
 
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navUl = document.querySelector('nav ul');
+
+    if (hamburger && navUl) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navUl.classList.toggle('show');
+        });
+
+        // Close menu when clicking on a link
+        navUl.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                hamburger.classList.remove('active');
+                navUl.classList.remove('show');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !navUl.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navUl.classList.remove('show');
+            }
+        });
+    }
+
     // Dropdown menu functionality
     const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdownMenu = document.querySelector('.dropdown-menu');
@@ -220,6 +247,32 @@ document.addEventListener('DOMContentLoaded', function() {
             faqItem.classList.add('active');
         });
     });
+
+    // About section scroll-triggered animations
+    const aboutObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const aboutText = entry.target.querySelector('.about-text');
+                const aboutImages = entry.target.querySelector('.about-images');
+
+                // Add animation classes with slight delay for staggered effect
+                setTimeout(() => {
+                    aboutText.classList.add('animate');
+                }, 200);
+
+                setTimeout(() => {
+                    aboutImages.classList.add('animate');
+                }, 400);
+
+                aboutObserver.unobserve(entry.target); // Animate only once
+            }
+        });
+    }, { threshold: 0.3 });
+
+    const aboutSection = document.querySelector('#about');
+    if (aboutSection) {
+        aboutObserver.observe(aboutSection);
+    }
 
     // Team Skills progress bar animations
     const skillsObserver = new IntersectionObserver((entries) => {
