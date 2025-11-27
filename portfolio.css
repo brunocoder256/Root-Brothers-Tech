@@ -255,15 +255,49 @@
         top: auto !important;
         left: auto !important;
         transform: none !important;
+        max-width: none;
     }
 
     .portfolio-detail {
         transform: none;
         opacity: 1;
         max-height: none;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .portfolio-detail.active {
         transform: none;
+    }
+
+    .gallery-images img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-card {
+        padding: 1.5rem;
+    }
+
+    .portfolio-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .portfolio-card p {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-detail {
+        padding: 1.5rem;
+    }
+
+    .gallery-images img {
+        height: 150px;
+    }
+
+    .project-tools span {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
 }
