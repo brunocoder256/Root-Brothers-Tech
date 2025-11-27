@@ -39,6 +39,8 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, #ADD8E6 0%, #008000 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: -1;
@@ -283,3 +285,127 @@
         transform: translateX(-50%);
     }
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .preview-panel {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-cards {
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    .preview-panel {
+        position: static;
+        margin-top: 2rem;
+    }
+
+    .preview-image {
+        height: 200px;
+    }
+
+    .preview-details {
+        padding: 1.5rem;
+    }
+
+    .animated-headline {
+        font-size: 1.8rem;
+    }
+
+    .preview-description {
+        font-size: 1rem;
+    }
+
+    .tech-stack span {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .tech-logos-marquee {
+        margin-top: 3rem;
+        padding: 1.5rem 0;
+    }
+
+    .logos-content span {
+        width: 50px;
+        height: 50px;
+        margin: 0 0.8rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        padding: 1rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+
+    .preview-image {
+        height: 150px;
+    }
+
+    .preview-details {
+        padding: 1rem;
+    }
+
+    .animated-headline {
+        font-size: 1.5rem;
+    }
+
+    .preview-description {
+        font-size: 0.9rem;
+    }
+
+    .tech-stack span {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .tech-logos-marquee {
+        margin-top: 2rem;
+        padding: 1rem 0;
+    }
+
+    .logos-content span {
+        width: 40px;
+        height: 40px;
+        margin: 0 0.6rem;
+        font-size: 1.5rem;
+    }
+}
+
