@@ -52,6 +52,39 @@ nav {
     height: 50px;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -124,12 +157,51 @@ nav ul li a:hover {
 
 .dropdown-menu li a:hover {
     background: linear-gradient(135deg, #ADD8E6 0%, #008000 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
     color: #fff;
     transform: translateX(5px);
 }
 
-/* Mobile Dropdown */
+/* Mobile Navigation */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
     .dropdown-menu {
         position: static;
         opacity: 1;
@@ -141,6 +213,7 @@ nav ul li a:hover {
         background: rgba(255, 255, 255, 0.9);
         border-radius: 0;
         border: none;
+        width: 100%;
     }
 
     .dropdown-menu.show {
@@ -175,19 +248,7 @@ nav ul li a:hover {
 
     nav {
         padding: 10px 20px;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-    }
-
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin-left: 0.5rem;
-        margin-bottom: 0.5rem;
     }
 }
