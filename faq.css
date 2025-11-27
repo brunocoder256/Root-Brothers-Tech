@@ -2,6 +2,8 @@
 #faq {
     padding: 5rem 0;
     background: linear-gradient(135deg, #f0f0f0 0%, #ADD8E6 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
 }
 
 #faq .container {
