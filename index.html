@@ -54,8 +54,18 @@
     <title>Root Brothers Tech - Design Agency</title>
     <link rel="icon" href="root 1 logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="why-choose-us.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="how-we-work.css">
+    <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="faq.css">
     <link rel="stylesheet" href="contact-icon-style.css">
     <link rel="stylesheet" href="contact-designer.css">
+    <link rel="stylesheet" href="team-skills.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -65,7 +75,14 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#hero" class="light-pop">Home<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+                <li class="dropdown">
+                    <a href="#hero" class="light-pop dropdown-toggle">Home<span></span><span></span><span></span><span></span><span></span><span></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#our-process">Our Process</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    </ul>
+                </li>
                 <li><a href="#about" class="light-pop">About<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
                 <li><a href="#services" class="light-pop">Services<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
                 <li><a href="#portfolio" class="light-pop">Portfolio<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
@@ -92,7 +109,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About Us</h2>
-                    <p>Root Brothers Tech is a leading design agency specializing in creating innovative websites, robust systems, and intuitive apps. We blend creativity with technology to deliver exceptional digital solutions.</p>
+                    <p>Root Brothers Tech is a leading design agency specializing in creating innovative websites, robust systems, and intuitive apps. We blend creativity with technology to deliver exceptional digital solutions. We and You are teams coming up together to produce perfectivity and enhance our digital experience, thats why we are called Root Brothers- we see and do beyond what natural can uphold</p>
                     <a href="#contact" class="cta-button">Learn More</a>
                 </div>
                 <div class="about-images">
@@ -122,6 +139,250 @@
                     <span>PostgreSQL</span>
                     <span>Git</span>
                     <span>Bootstrap</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team-skills">
+        <div class="container">
+            <h2>Team Skills</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="member-name">Ewo Bruno</h3>
+                        <p class="member-role">Lead Developer</p>
+                    </div>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>HTML/CSS</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="95"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>JavaScript</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="90"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>React</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Python</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="80"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="member-name">Mwanguzi Ivan</h3>
+                        <p class="member-role">UI/UX Designer</p>
+                    </div>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Figma</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="95"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Adobe XD</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="90"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Sketch</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Prototyping</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="88"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="member-name">Mwanje Dalton</h3>
+                        <p class="member-role">Backend Developer</p>
+                    </div>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Node.js</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="92"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Django</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="88"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>PostgreSQL</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>API Development</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="90"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="member-name">Rubangakene Jerry</h3>
+                        <p class="member-role">Project Manager</p>
+                    </div>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Agile/Scrum</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="95"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Team Leadership</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="90"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Communication</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="92"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Problem Solving</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="88"></div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="member-name">Ekwan Elly</h3>
+                        <p class="member-role">Design consultant</p>
+                    </div>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Design Thinking</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="90"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Branding</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>User Research</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="88"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-label">
+                                <span>Wireframing</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="92"></div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -245,6 +506,156 @@
                     <span><i class="fab fa-aws"></i></span>
                     <span><i class="fab fa-git-alt"></i></span>
                     <span><i class="fab fa-bootstrap"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Experienced Team</h3>
+                    <p>Our skilled professionals bring years of expertise in design and development, ensuring top-notch results for every project.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Innovative Solutions</h3>
+                    <p>We leverage cutting-edge technologies and creative approaches to deliver unique, forward-thinking digital solutions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>We prioritize efficiency without compromising quality, delivering projects on time and within budget.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous testing and quality checks ensure that every product meets the highest standards of performance and reliability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="our-process">
+        <div class="container">
+            <h2>Our Process / How We Work</h2>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-icon">1</div>
+                    <h3>Discovery</h3>
+                    <p>We start by understanding your vision, goals, and requirements through in-depth consultations and research.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">2</div>
+                    <h3>Design</h3>
+                    <p>Our creative team develops wireframes, mockups, and prototypes that bring your ideas to life with stunning visuals.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">3</div>
+                    <h3>Development</h3>
+                    <p>We build robust, scalable solutions using cutting-edge technologies, ensuring performance and security.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">4</div>
+                    <h3>Delivery</h3>
+                    <p>We deploy your project, provide training, and offer ongoing support to ensure your success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="ACKNOM LOGO.png" alt="Client Photo" class="client-photo">
+                    <h3 class="client-name">Acksam</h3>
+                    <p class="testimonial-text">Root Brothers Tech transformed our online presence completely. Their attention to detail and innovative approach exceeded our expectations. Highly recommended!</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="Debobis.PNG" alt="Client Photo" class="client-photo">
+                    <h3 class="client-name">Hassan</h3>
+                    <p class="testimonial-text">Working with Root Brothers Tech was a game-changer for our business. They delivered a robust system that streamlined our operations and improved efficiency significantly.</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="Business.jpg" alt="Client Photo" class="client-photo">
+                    <h3 class="client-name">Emma</h3>
+                    <p class="testimonial-text">The mobile app they developed for us is intuitive and user-friendly. Our customers love it, and we've seen a substantial increase in user engagement.</p>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-icon">?</div>
+                        What services do you offer?
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a comprehensive range of digital services including website design, system development, mobile app creation, and innovative digital solutions tailored to meet your business needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-icon">?</div>
+                        How long does a typical project take?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Project timelines vary depending on complexity and scope. A simple website might take 2-4 weeks, while complex systems could take 2-6 months. We'll provide a detailed timeline during our initial consultation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-icon">?</div>
+                        Do you provide ongoing support after project completion?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive maintenance and support packages to ensure your digital solutions remain up-to-date, secure, and performing optimally after launch.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-icon">?</div>
+                        What technologies do you use?
+                    </button>
+                    <div class="faq-answer">
+                        <p>We work with modern technologies including HTML, CSS, JavaScript, React, Python, Django, Node.js, PostgreSQL, and more. We choose the best tools for each project's specific requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-icon">?</div>
+                        How do you ensure project quality?
+                    </button>
+                    <div class="faq-answer">
+                        <p>We follow industry best practices with rigorous testing, code reviews, and quality assurance processes. Each project goes through multiple stages of validation before delivery.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <div class="faq-icon">?</div>
+                        Can you work with existing systems?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We can integrate with existing systems, migrate data, or enhance current solutions. We'll assess your current setup and provide recommendations for improvement.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -464,6 +875,10 @@
                             <li><a href="#hero">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#services">Services</a></li>
+                            <li><a href="#why-choose-us">Why Choose Us</a></li>
+                            <li><a href="#our-process">Our Process</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#faq">FAQ</a></li>
                             <li><a href="#portfolio">Portfolio</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
@@ -481,7 +896,7 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Kampala - Uganda</span>
+                            <span>Kampala - Gulu City - Uganda</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-clock"></i>
