@@ -79,6 +79,8 @@
     height: 80px;
     margin: 0 auto 1.5rem;
     background: linear-gradient(135deg, #ADD8E6 0%, #008000 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
     border-radius: 50%;
     display: flex;
     align-items: center;
