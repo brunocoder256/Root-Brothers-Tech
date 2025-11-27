@@ -10,6 +10,14 @@
 .about-text {
     flex: 1;
     text-align: left;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-text.animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-text h2 {
@@ -30,6 +38,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-images.animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .image-primary {
@@ -106,33 +122,36 @@
 /* Responsive */
 @media (max-width: 768px) {
     .about-content {
-        flex-direction: row;
-        gap: 1rem;
-        align-items: flex-start;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
     }
 
     .about-text {
-        flex: 1;
-        text-align: left;
+        flex: none;
+        text-align: center;
     }
 
     .about-text h2 {
-        text-align: left;
+        text-align: center;
     }
 
     .about-images {
-        flex: 1;
-        height: 200px;
+        flex: none;
+        height: 300px;
     }
 
     .image-primary {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
     }
 
     .image-secondary {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
+        bottom: 10px;
+        right: 30%;
     }
 
     .marquee-content span {
@@ -144,31 +163,32 @@
 
 @media (max-width: 480px) {
     .about-content {
-        flex-direction: row;
-        gap: 1rem;
-        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        text-align: center;
     }
 
     .about-text {
-        flex: 1;
-        text-align: left;
+        flex: none;
+        text-align: center;
     }
 
     .about-text h2 {
         font-size: 1.8rem;
         margin-bottom: 1rem;
-        text-align: left;
+        text-align: center;
     }
 
     .about-text p {
         font-size: 1rem;
         margin-bottom: 1.5rem;
-        text-align: left;
+        text-align: center;
     }
 
     .about-images {
-        flex: 1;
-        height: 200px;
+        flex: none;
+        height: 250px;
     }
 
     .image-primary {
@@ -179,6 +199,8 @@
     .image-secondary {
         width: 100px;
         height: 100px;
+        bottom: 5px;
+        right: 35%;
     }
 
     .tech-marquee {
