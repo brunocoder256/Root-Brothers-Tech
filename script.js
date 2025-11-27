@@ -168,4 +168,77 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactSection) {
         contactObserver.observe(contactSection);
     }
+
+    // Dropdown menu functionality
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    if (dropdownToggle && dropdownMenu) {
+        // Check if device is mobile
+        const isMobile = window.innerWidth <= 768;
+
+        if (isMobile) {
+            // Mobile: click to toggle
+            dropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('show');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownToggle.closest('.dropdown').contains(e.target)) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+        } else {
+            // Desktop: hover to show/hide
+            const dropdown = dropdownToggle.closest('.dropdown');
+
+            dropdown.addEventListener('mouseenter', function() {
+                dropdownMenu.classList.add('show');
+            });
+
+            dropdown.addEventListener('mouseleave', function() {
+                dropdownMenu.classList.remove('show');
+            });
+        }
+    }
+
+    // FAQ accordion functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+
+            // Remove active class from all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add active class to the clicked FAQ item
+            faqItem.classList.add('active');
+        });
+    });
+
+    // Team Skills progress bar animations
+    const skillsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillBars = entry.target.querySelectorAll('.skill-progress');
+                skillBars.forEach((bar, index) => {
+                    setTimeout(() => {
+                        const skillValue = bar.getAttribute('data-skill');
+                        bar.style.width = skillValue + '%';
+                    }, index * 200); // Stagger animations
+                });
+                skillsObserver.unobserve(entry.target); // Animate only once
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const teamMembers = document.querySelectorAll('.team-member');
+    teamMembers.forEach(member => {
+        skillsObserver.observe(member);
+    });
 });
