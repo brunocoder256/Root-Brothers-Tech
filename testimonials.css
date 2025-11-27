@@ -60,6 +60,8 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, #ADD8E6 0%, #008000 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: -1;
